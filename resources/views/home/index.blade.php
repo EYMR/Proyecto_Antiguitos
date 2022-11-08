@@ -16,7 +16,15 @@
 </head>
 
 <body>
-    <h1 class="display-2" style="text-align: center; margin-top: 2%;">Menu Principal</h1>
+
+    @auth 
+    <p class="fs-2">Bienvenido {{auth()->user()->name ?? auth()->user()->username}}</p>
+    <p class="fs-2">
+        <a href="/logout"> Logout </a>
+    </p>
+    @endauth 
+
+    <h1 class="display-2" style="text-align: center; margin-top: 2%;">Menu Principal</h1>    
     <div class="container" style="margin:auto">
         <div class="row">
             <div class="col">
