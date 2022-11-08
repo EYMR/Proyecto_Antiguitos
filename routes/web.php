@@ -19,11 +19,9 @@ Route::get('/', function () {
 */
 
 
-Route::get('/register', function(){
-    return view('auth.register');
-});
+Route::get('/register', [RegisterController::class,'show']);
 
-Route::post('/register', [RegisterController::class, 'register']);
+Route::post('/register', [RegisterController::class,'register']);
 
 
 
