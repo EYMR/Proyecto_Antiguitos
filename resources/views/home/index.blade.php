@@ -16,12 +16,10 @@
 </head>
 
 <body>
-
+@extends('layouts.app-master')
+@section('content')
     @auth 
     <p class="fs-2">Bienvenido {{auth()->user()->name ?? auth()->user()->username}}</p>
-    <p class="fs-2">
-        <a href="/logout"> Logout </a>
-    </p>
     @endauth 
 
     <h1 class="display-2" style="text-align: center; margin-top: 2%;">Menu Principal</h1>    
@@ -92,6 +90,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
+    @endsection
 </body>
 
 </html>
