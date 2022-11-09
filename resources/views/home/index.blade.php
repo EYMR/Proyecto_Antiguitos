@@ -39,7 +39,7 @@
                         <h5 class="card-title" style="text-align: center; margin: 3%">Discos de Vinil</h5>
                         <img src="../Inventarios/Img/395.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <a href="../Inventarios/Inventarios.php" class="btn btn-primary">Entrar</a>
+                            <a href="/FormVinilos" class="btn btn-primary">Entrar</a>
                         </div>
                     </div>
 

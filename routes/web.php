@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormVinilo;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
@@ -35,6 +36,8 @@ Route::get('/home', [HomeController::class,'index']);
 
 Route::get('/logout', [LogoutController::class,'logout']);
 
+
+Route::get('/FormVinilos',[FormVinilo::class,'FormVinilos'])->name('FVinilos');
 
 
 
