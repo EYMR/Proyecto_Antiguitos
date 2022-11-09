@@ -1,10 +1,19 @@
+<title>Formulario de Vinilos</title>
+
+
 @extends('layouts.auth-master')  
 @section('content')
+
+
+
+<link rel="icon" href="../img/addP.png">
+<div class="center">
     @auth 
     <p class="fs-2" style="text-align:left">Bienvenido {{auth()->user()->name ?? auth()->user()->username}}</p>
     @endauth
     <h1> Guardar Vinilo </h1>
-    <form action="/registerVinilo" method="POST">
+
+    <form action="/guardarVinilo" method="POST">
     @csrf
     <div class="form-floating mb-3">
         <input type="text" placeholder="Interprete" name="interprete" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -37,5 +46,6 @@
 
     <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
+</div>
 @endsection
 

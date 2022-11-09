@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tb_vinilos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('interprete');
             $table->string('album');
             $table->string('disquera');

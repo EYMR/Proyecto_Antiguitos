@@ -1,19 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\Http\Requests\FormViniloRequest;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 class FormVinilo extends Controller
 {
-    public function FormVinilos(){
-        return view('auth.FormVinilos');
-}
+    function guardarVinilo(Request $request){
 
-public function registerVinilo(FormViniloRequest $request){
-    $vinil = User::create($request->validated());
-    return redirect('/FormVinilos')->with('success', 'Account created successfully');
-}
-}
+        $vinilo = new FormVinilo;
+        $vinilo->interprete = $request->input("interprete");        
+        $vinilo->album = $request->input("album");
+        $vinilo->disquera = $request->input("disquera");
+        $vinilo->lanzamiento = $request->input("lanzamiento");
+        $vinilo->Ncanciones=$request->input("Ncanciones");
+        $vinilo->cantidad = $request->input("cantidad");
+        $vinilo->pCompra = $request->input("pCompra");
+        $vinilo->pVenta = $request->input("pVenta");
+        $vinilo->save();
+        return view("FormVinilos");
+    }
+    }
+?>
+
+
+
+
+
+
+

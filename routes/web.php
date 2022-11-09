@@ -37,11 +37,18 @@ Route::get('/home', [HomeController::class,'index']);
 
 Route::get('/logout', [LogoutController::class,'logout']);
 
+Route::get('/FormVinilos', function(){
+    return view ('auth.FormVinilos');
+});
 
-Route::get('/FormVinilos',[FormVinilo::class,'FormVinilos'])->name('FVinilos');
-Route::get('/FormCD',[FormCdController::class,'FormCD'])->name('FormCD');
+Route::post('/guardarVinilo',[FormVinilo::class,'guardarVinilo']);
+
+Route::get('/FormCD', function(){
+    return view ('auth.FormCD');
+});
 
 
+Route::post('/guardarVinilo',[FormVinilo::class,'guardarVinilo']);
 
 
 

@@ -6,7 +6,7 @@
     <p class="fs-2" style="text-align:left">Bienvenido {{auth()->user()->name ?? auth()->user()->username}}</p>
     @endauth
 
-    <form action="/registerVinilo" method="POST">
+    <form action="/guardarCD" method="POST">
     @csrf
     <h1> Guardar Cd o Casete </h1>
     @include('layouts.partials.messages')
