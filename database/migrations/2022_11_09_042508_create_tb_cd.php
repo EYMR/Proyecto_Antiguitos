@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('tb_cd', function (Blueprint $table) {
             $table->id();
             $table->string('interprete');
-            $table->string('album');
-            $table->string('disquera');
-            $table->string('lanzamiento');
-            $table->string('Ncanciones');
+            $table->string('descripcion');
+            $table->string('NCanciones');
+            $table->string('cantidad');
             $table->string('PCompra');
             $table->string('PVenta');
+            $table->date('fecha_ingreso');
             $table->timestamps();
         });
     }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormCdController;
 use App\Http\Controllers\FormVinilo;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -38,6 +39,8 @@ Route::get('/logout', [LogoutController::class,'logout']);
 
 
 Route::get('/FormVinilos',[FormVinilo::class,'FormVinilos'])->name('FVinilos');
+Route::get('/FormCD',[FormCdController::class,'FormCD'])->name('FormCD');
+
 
 
 

@@ -3,11 +3,9 @@
     @auth 
     <p class="fs-2" style="text-align:left">Bienvenido {{auth()->user()->name ?? auth()->user()->username}}</p>
     @endauth
-
+    <h1> Guardar Vinilo </h1>
     <form action="/registerVinilo" method="POST">
     @csrf
-    <h1> Guardar Vinilo </h1>
-    @include('layouts.partials.messages')
     <div class="form-floating mb-3">
         <input type="text" placeholder="Interprete" name="interprete" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <label for="exampleInputEmail1" class="form-label">Interprete</label>
